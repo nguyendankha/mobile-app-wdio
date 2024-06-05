@@ -53,6 +53,12 @@ exports.config = {
     ui: "bdd",
     timeout: 60000,
   },
+
+  before: function (capabilities, specs) {
+    // Ensure module-alias is registered
+    require('module-alias/register');
+  },
+
   onComplete: function () {
     const reportError = new Error("Could not generate Allure report");
     const generation = allure(["generate", "reports", "--clean"]);
