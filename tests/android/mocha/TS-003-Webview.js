@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const webview = require('../../../resources/android/pages/webview/action.js');
-const assert = require('../../../resources/android/pages/webview/assert.js');
+const webview = require('../../../pages/android/webview/action.js');
+const assert = require('../../../pages/android/webview/assert.js');
 const variable = require('../../../resources/shared/variable.js');
 
 describe('TS-003 | Webview', function() {

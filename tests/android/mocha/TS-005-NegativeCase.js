@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const login = require('../../../resources/android/pages/login/action.js');
-const assert = require('../../../resources/android/pages/login/assert.js');
+const login = require('../../../pages/android/login/action.js');
+const assert = require('../../../pages/android/login/assert.js');
 const variable = require('../../../resources/shared/variable.js');
 
 describe('TS-005 | Negative Case', function() {

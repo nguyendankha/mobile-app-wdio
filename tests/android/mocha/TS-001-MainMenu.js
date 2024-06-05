@@ -1,7 +1,8 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const mainMenu = require('../../../resources/android/pages/main-page/action.js');
-const assert = require('../../../resources/android/pages/main-page/assert.js');
+// const mainMenu = require('../../../pages/android/main-page/action.js');
+const mainMenu = require('@pages/android/main-page/action.js');
+const assert = require('../../../pages/android/main-page/assert.js');
 
 describe('TS-001 | Main Menu', function() {
 	it('TC-001 | Check all content is loaded', async function() {

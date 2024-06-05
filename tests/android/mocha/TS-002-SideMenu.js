@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const sideMenu = require('../../../resources/android/pages/sidemenu/action.js');
-const assert = require('../../../resources/android/pages/sidemenu/assert.js');
+const sideMenu = require('../../../pages/android/sidemenu/action.js');
+const assert = require('../../../pages/android/sidemenu/assert.js');
 
 describe('TS-002 | Side Menu', function() {
 	it('TC-001 | Check all content is loaded', async function() {
