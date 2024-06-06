@@ -1,16 +1,22 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const login = {
-    action: require('@pages/android/login/action.js'),
-    assert: require('@pages/android/login/assert.js')
-};
-const logout = {
-    action: require('@pages/android/logout/action.js'),
-    assert: require('@pages/android/logout/assert.js')
-};
-const variable = require('@resources/shared/variable.js');
+let login;
+let logout;
+let variable;
 
 describe('TS-004 | Login & Logout', function () {
+    before(async function () {
+        login = {
+            action: require('@pages/android/login/action.js'),
+            assert: require('@pages/android/login/assert.js')
+        };
+        logout = {
+            action: require('@pages/android/logout/action.js'),
+            assert: require('@pages/android/logout/assert.js')
+        };
+        variable = require('@resources/shared/variable.js');
+    });
+
     it('TC-001 | Check all content is loaded', async function () {
         allureReporter.addTag('Sanity Test');
         allureReporter.addSeverity('normal');

@@ -1,10 +1,15 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const login = require('@pages/android/login/action.js');
-const assert = require('@pages/android/login/assert.js');
-const variable = require('@resources/shared/variable.js');
+let login;
+let assert;
+let variable;
 
 describe('TS-005 | Negative Case', function () {
+    before(async function () {
+        login = require('@pages/android/login/action.js');
+        assert = require('@pages/android/login/assert.js');
+        variable = require('@resources/shared/variable.js');
+    });
     it('TC-001 | Failed Login - Invalid Credential', async function () {
         allureReporter.addTag('Negative Test');
         allureReporter.addSeverity('normal');

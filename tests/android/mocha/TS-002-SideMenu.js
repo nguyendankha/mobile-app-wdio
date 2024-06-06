@@ -1,10 +1,14 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const sideMenu = require('@pages/android/sidemenu/action.js');
-const assert = require('@pages/android/sidemenu/assert.js');
+let sideMenu;
+let assert;
 
 describe('TS-002 | Side Menu', function () {
-    
+    before(async function () {
+        sideMenu = require('@pages/android/sidemenu/action.js');
+        assert = require('@pages/android/sidemenu/assert.js');
+    });
+
     it('TC-001 | Check all content is loaded', async function () {
         allureReporter.addTag('Sanity Test');
         allureReporter.addSeverity('normal');

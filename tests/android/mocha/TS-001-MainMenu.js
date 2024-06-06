@@ -1,10 +1,7 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-// const mainMenu = require('../../../pages/android/main-page/action.js');
-// const mainMenu = require('@pages/android/main-page/action.js');
-// const assert = require('../../../pages/android/main-page/assert.js');
-let mainMenu
-let assert
+let mainMenu;
+let assert;
 
 describe('TS-001 | Main Menu', function () {
     before(async function () {

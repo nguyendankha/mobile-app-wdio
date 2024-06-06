@@ -1,10 +1,15 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const webview = require('@pages/android/webview/action.js');
-const assert = require('@pages/android/webview/assert.js');
-const variable = require('@resources/shared/variable.js');
+let webview;
+let assert;
+let variable;
 
 describe('TS-003 | Webview', function () {
+    before(async function () {
+        webview = require('@pages/android/webview/action.js');
+        assert = require('@pages/android/webview/assert.js');
+        variable = require('@resources/shared/variable.js');
+    });
     it('TC-001 | Check all content is loaded', async function () {
         allureReporter.addTag('Sanity Test');
         allureReporter.addSeverity('normal');
