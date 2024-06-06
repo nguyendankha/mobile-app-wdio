@@ -1,26 +1,31 @@
 const expect = require('chai').expect;
 const allureReporter = require('@wdio/allure-reporter').default;
-const sideMenu = require('../../../resources/android/pages/sidemenu/action.js');
-const assert = require('../../../resources/android/pages/sidemenu/assert.js');
+let sideMenu;
+let assert;
 
-describe('TS-002 | Side Menu', function() {
-	it('TC-001 | Check all content is loaded', async function() {
-		allureReporter.addTag('Sanity Test');
-		allureReporter.addSeverity('normal');
+describe('TS-002 | Side Menu', function () {
+    before(async function () {
+        sideMenu = require('@pages/android/sidemenu/action.js');
+        assert = require('@pages/android/sidemenu/assert.js');
+    });
 
-		const response = await sideMenu.checkContent();
+    it('TC-001 | Check all content is loaded', async function () {
+        allureReporter.addTag('Sanity Test');
+        allureReporter.addSeverity('normal');
 
-		expect(response.webviewText).equal(assert.attribute.webviewText, response.webviewText);
-		expect(response.catalogText).equal(assert.attribute.catalogText, response.catalogText);
-		expect(response.aboutText).equal(assert.attribute.aboutText, response.aboutText);
-	});
+        const response = await sideMenu.checkContent();
 
-	it('TC-002 | Access "About Page"', async function() {
-		allureReporter.addTag('Sanity Test');
-		allureReporter.addSeverity('normal');
+        expect(response.webviewText).equal(assert.attribute.webviewText, response.webviewText);
+        expect(response.catalogText).equal(assert.attribute.catalogText, response.catalogText);
+        expect(response.aboutText).equal(assert.attribute.aboutText, response.aboutText);
+    });
 
-		const response = await sideMenu.accessAboutPage();
+    it('TC-002 | Access "About Page"', async function () {
+        allureReporter.addTag('Sanity Test');
+        allureReporter.addSeverity('normal');
 
-		expect(response).equal(true, response);
-	});
+        const response = await sideMenu.accessAboutPage();
+
+        expect(response).equal(true, response);
+    });
 });

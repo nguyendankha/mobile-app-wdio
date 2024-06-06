@@ -1,33 +1,33 @@
 const allureReporter = require('@wdio/allure-reporter').default;
 const expect = require('chai').expect;
-const sideMenu = require('../../../resources/ios/pages/side-menu/action.js');
-const assert = require('../../../resources/ios/pages/side-menu/assert.js');
+const sideMenu = require('@pages/ios/side-menu/action.js');
+const assert = require('@pages/ios/side-menu/assert.js');
 
-describe('TS-002 | Side Menu', function() {
-	it('TC-001 | Check all content is loaded', async function() {
-		allureReporter.addTag('Sanity Test');
-		allureReporter.addSeverity('normal');
+describe('TS-002 | Side Menu', function () {
+    it('TC-001 | Check all content is loaded', async function () {
+        allureReporter.addTag('Sanity Test');
+        allureReporter.addSeverity('normal');
 
-		await sideMenu.openSideMenu();
-		const response = await sideMenu.checkContent();
+        await sideMenu.openSideMenu();
+        const response = await sideMenu.checkContent();
 
-		expect(response.webviewText).equal(assert.attribute.webviewText, response.webviewText);
-		expect(response.aboutText).equal(assert.attribute.aboutText, response.aboutText);
-		expect(response.loginText).equal(assert.attribute.loginText, response.loginText);
-		expect(response.logoutText).equal(assert.attribute.logoutText, response.logoutText);
-	});
+        expect(response.webviewText).equal(assert.attribute.webviewText, response.webviewText);
+        expect(response.aboutText).equal(assert.attribute.aboutText, response.aboutText);
+        expect(response.loginText).equal(assert.attribute.loginText, response.loginText);
+        expect(response.logoutText).equal(assert.attribute.logoutText, response.logoutText);
+    });
 
-	it('TC-002 | The page is scrollable', async function() {
-		allureReporter.addTag('Sanity Test');
-		allureReporter.addSeverity('normal');
+    it('TC-002 | The page is scrollable', async function () {
+        allureReporter.addTag('Sanity Test');
+        allureReporter.addSeverity('normal');
 
-		await sideMenu.scrollPage();		
-	});
+        await sideMenu.scrollPage();
+    });
 
-	it('TC-003 | Access "About Page"', async function() {
-		allureReporter.addTag('Sanity Test');
-		allureReporter.addSeverity('normal');
+    it('TC-003 | Access "About Page"', async function () {
+        allureReporter.addTag('Sanity Test');
+        allureReporter.addSeverity('normal');
 
-		await sideMenu.accessAboutPage();
-	});
+        await sideMenu.accessAboutPage();
+    });
 });

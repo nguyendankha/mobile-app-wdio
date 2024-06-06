@@ -1,23 +1,23 @@
 {
-  "name": "mobileui-appium-wdio-example",
+  "name": "mobile-app-wdio",
   "version": "1.0.0",
-  "description": "Mobile UI Automation Test Example Project with Appium + WebdriverIO",
+  "description": "Mobile UI Automation Test Project with Appium + WebdriverIO",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test-android": "wdio run ./config/android/wdio.conf.android.mocha.local.js",
-    "test-android-ci": "wdio run ./config/android/wdio.conf.android.mocha.ci.js",
-    "test-android-bdd": "wdio run ./config/android/wdio.conf.android.cucumber.local.js",
-    "test-android-bdd-ci": "wdio run ./config/android/wdio.conf.android.cucumber.ci.js",
-    "test-ios": "wdio run ./config/ios/wdio.conf.ios.mocha.local.js",
-    "test-ios-ci": "wdio run ./config/ios/wdio.conf.ios.mocha.ci.js",
+    "test-android": "node index.js && wdio run ./config/android/wdio.conf.android.mocha.local.js",
+    "test-android-ci": "node index.js && wdio run ./config/android/wdio.conf.android.mocha.ci.js",
+    "test-android-bdd": "node index.js && wdio run ./config/android/wdio.conf.android.cucumber.local.js",
+    "test-android-bdd-ci": "node index.js && wdio run ./config/android/wdio.conf.android.cucumber.ci.js",
+    "test-ios": "node index.js && wdio run ./config/ios/wdio.conf.ios.mocha.local.js",
+    "test-ios-ci": "node index.js && wdio run ./config/ios/wdio.conf.ios.mocha.ci.js",
     "report": "allure open"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "kha-nguyen",
+  "license": "MIT",
   "dependencies": {
     "@wdio/allure-reporter": "^8.10.4",
     "@wdio/appium-service": "^8.10.5",
@@ -36,6 +36,12 @@
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
-    "@penseapp/discord-notification": "^2.0.9"
+    "@penseapp/discord-notification": "^2.0.9",
+    "module-alias": "^2.2.3"
+  },
+  "_moduleAliases": {
+    "@pages": "pages",
+    "@resources": "resources",
+    "@utils": "utils"
   }
 }
