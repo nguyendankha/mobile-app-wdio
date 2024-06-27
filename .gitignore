@@ -10,3 +10,5 @@ logs
 .DS_Store
 bugreport*
 package-lock.json
+./resources/utils/temp/
+./resources/utils/temp
