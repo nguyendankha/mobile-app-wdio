@@ -1,34 +1,83 @@
-const expect = require('chai').expect;
-const allureReporter = require('@wdio/allure-reporter').default;
-let mainMenu;
-let assert;
+// const expect = require('chai').expect;
+// const allureReporter = require('@wdio/allure-reporter').default;
+// const mainMenu = require('../../../resources/android/pages/main-page/action.js');
+// const assert = require('../../../resources/android/pages/main-page/assert.js');
+//
+// describe('TS-001 | Main Menu', function() {
+// 	it('TC-001 | Check all content is loaded', async function() {
+// 		allureReporter.addTag('Sanity Test');
+// 		allureReporter.addSeverity('normal');
+//
+// 		const response = await mainMenu.checkAllContent();
+// 		expect(response).equal(assert.attribute.pageTitleText, response);
+// 	});
+//
+// 	it('TC-002 | The page is scrollable', async function() {
+// 		allureReporter.addTag('Sanity Test');
+// 		allureReporter.addSeverity('normal');
+//
+// 		await mainMenu.scrollPage();
+// 	});
+//
+// 	it('TC-003 | Check sort function is work', async function() {
+// 		allureReporter.addTag('Sanity Test');
+// 		allureReporter.addSeverity('normal');
+//
+// 		const response = await mainMenu.checkSortFunction();
+// 		expect(response).equal(assert.attribute.sortDescText, response);
+// 	});
+// });
 
-describe('TS-001 | Main Menu', function () {
-    before(async function () {
-        mainMenu = require('@pages/android/main-page/action.js');
-        assert = require('@pages/android/main-page/assert.js');
-    });
+// const expect = require('chai').expect;
+// const allureReporter = require('@wdio/allure-reporter').default;
+// const mainMenu = require('../../../resources/android/pages/main-page/action.js');
+// const assert = require('../../../resources/android/pages/main-page/assert.js');
+//
+// describe('TS-001 | Main Menu', function() {
+// 	it('TC-001 | Check all content is loaded', async function() {
+// 		allureReporter.addTag('Sanity Test');
+// 		allureReporter.addSeverity('normal');
+//
+// 		const response = await mainMenu.checkAllContent();
+// 		expect(response).equal(assert.attribute.pageTitleText, response);
+// 	});
+//
+// 	it('TC-002 | The page is scrollable', async function() {
+// 		allureReporter.addTag('Sanity Test');
+// 		allureReporter.addSeverity('normal');
+//
+// 		await mainMenu.scrollPage();
+// 	});
+//
+// 	it('TC-003 | Check sort function is work', async function() {
+// 		allureReporter.addTag('Sanity Test');
+// 		allureReporter.addSeverity('normal');
+//
+// 		const response = await mainMenu.checkSortFunction();
+// 		expect(response).equal(assert.attribute.sortDescText, response);
+// 	});
+// });
 
-    it('TC-001 | Check all content is loaded', async function () {
-        allureReporter.addTag('Sanity Test');
-        allureReporter.addSeverity('normal');
+// test suites: TS-001.js
+const { expect, setupAllure } = require('../../common/test-common');
+const mainMenu = require('../../../resources/pages/android/pages/main-page/action.js');
+const assert = require('../../../resources/pages/android/pages/main-page/assert.js');
 
-        const response = await mainMenu.checkAllContent();
-        expect(response).equal(assert.attribute.pageTitleText, response);
-    });
+describe('TS-001 | Main Menu', function() {
+	it('TC-001 | Check all content is loaded', async function() {
+		setupAllure(['Sanity Test']);
+		const response = await mainMenu.checkAllContent();
+		expect(response).equal(assert.attribute.pageTitleText, response);
+	});
 
-    it('TC-002 | The page is scrollable', async function () {
-        allureReporter.addTag('Sanity Test');
-        allureReporter.addSeverity('normal');
+	it('TC-002 | The page is scrollable', async function() {
+		setupAllure(['Sanity Test']);
+		await mainMenu.scrollPage();
+	});
 
-        await mainMenu.scrollPage();
-    });
-
-    it('TC-003 | Check sort function is work', async function () {
-        allureReporter.addTag('Sanity Test');
-        allureReporter.addSeverity('normal');
-
-        const response = await mainMenu.checkSortFunction();
-        expect(response).equal(assert.attribute.sortDescText, response);
-    });
+	it('TC-003 | Check sort function is work', async function() {
+		setupAllure(['Sanity Test']);
+		const response = await mainMenu.checkSortFunction();
+		expect(response).equal(assert.attribute.sortDescText, response);
+	});
 });
