@@ -54,8 +54,8 @@
 
 // test suites: TS-002.js
 const { expect, setupAllure } = require('../../common/test-common');
-const sideMenu = require('../../../resources/pages/android/pages/sidemenu/action.js');
-const assert = require('../../../resources/pages/android/pages/sidemenu/assert.js');
+const sideMenu = require('../../../pages/android/pages/sidemenu/action.js');
+const assert = require('../../../pages/android/pages/sidemenu/assert.js');
 
 describe('TS-002 | Side Menu', function() {
 	it('TC-001 | Check all content is loaded', async function() {

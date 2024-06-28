@@ -2,7 +2,7 @@ const selector = {
 	mainMenu: require('../main-page/selector.js'),
 	sideMenu: require('../side-menu/selector.js'),
 	login: require('./selector.js'),
-	keyboard: require('../../../../shared/keyboard.js')
+	keyboard: require('../../../../resources/shared/keyboard.js')
 };
 
 module.exports = {

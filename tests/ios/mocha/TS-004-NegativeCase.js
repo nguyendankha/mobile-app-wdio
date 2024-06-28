@@ -1,7 +1,7 @@
 const allureReporter = require('@wdio/allure-reporter').default;
 const expect = require('chai').expect;
-const login = require('../../../resources/pages/ios/pages/login/action.js');
-const assert = require('../../../resources/pages/ios/pages/login/assert.js');
+const login = require('../../../pages/ios/pages/login/action.js');
+const assert = require('../../../pages/ios/pages/login/assert.js');
 const variable = require('../../../resources/shared/variable.js');
 
 describe('TS-004 | Negative Case', function() {

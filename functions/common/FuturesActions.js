@@ -2,7 +2,8 @@ const FuturesUtils = require('../../resources/utils/FuturesUtils');
 
 class FuturesActions {
     constructor() {
-        this.isQA = FuturesUtils.getUserData(this.getLoginAccount()).isQA;
+        const loginAccount = FuturesActions.getLoginAccount();
+        this.isQA = FuturesUtils.getUserData(loginAccount).isQA;
     }
 
     static loginAccount = 'NO3';

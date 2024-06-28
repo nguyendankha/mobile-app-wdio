@@ -1,0 +1,15 @@
+{
+  "urls": {
+    "umUrl": "https://fapi.binance.com/fapi",
+    "cmUrl": "https://fapi.binance.com/dapi",
+    "burl": "https://fapi.binance.com/bapi",
+    "defaultApiKey": "ZKFWLYljvxPv9rFKIf03jUDuLgCZ2Ua2ffVjoLaMJ40Ns1DTGysyIU2xq9rKbI52",
+    "defaultSecret": "s4svjr70Lb9GvV35BaD9NtIE1Su2r7fSOAoz9K9pysLhdj55tn5CgQKnctOeIHHC",
+    "disableCheckUrl": "http://10.100.41.251:8870/disableCheck",
+    "enableCheckUrl": "http://10.100.41.251:8870/enableCheck"
+  },
+  "timeConfig": {
+    "recvWindow": 5000,
+    "timestampKey": "timestamp"
+  }
+}

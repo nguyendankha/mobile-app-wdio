@@ -1,12 +1,12 @@
 const allureReporter = require('@wdio/allure-reporter').default;
 const expect = require('chai').expect;
 const login = {
-	action: require('../../../resources/pages/ios/pages/login/action.js'),
-	assert: require('../../../resources/pages/ios/pages/login/assert.js')
+	action: require('../../../pages/ios/pages/login/action.js'),
+	assert: require('../../../pages/ios/pages/login/assert.js')
 };
 const logout = {
-	action: require('../../../resources/pages/ios/pages/logout/action.js'),
-	assert: require('../../../resources/pages/ios/pages/logout/assert.js')
+	action: require('../../../pages/ios/pages/logout/action.js'),
+	assert: require('../../../pages/ios/pages/logout/assert.js')
 };
 const variable = require('../../../resources/shared/variable.js');
 

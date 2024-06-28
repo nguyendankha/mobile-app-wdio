@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 const allureReporter = require('@wdio/allure-reporter').default;
 const expect = require('chai').expect; 
-const mainMenu = require('../../../resources/pages/ios/pages/main-page/action.js');
-const assert = require('../../../resources/pages/ios/pages/main-page/assert.js');
+const mainMenu = require('../../../pages/ios/pages/main-page/action.js');
+const assert = require('../../../pages/ios/pages/main-page/assert.js');
 
 describe('TS-001 | Main Menu', function() {
 	it('TC-001 | Check all content is loaded', async function() {

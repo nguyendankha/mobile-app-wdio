@@ -56,8 +56,8 @@
 
 // test suites: TS-003.js
 const { expect, setupAllure } = require('../../common/test-common');
-const webview = require('../../../resources/pages/android/pages/webview/action.js');
-const assert = require('../../../resources/pages/android/pages/webview/assert.js');
+const webview = require('../../../pages/android/pages/webview/action.js');
+const assert = require('../../../pages/android/pages/webview/assert.js');
 const variable = require('../../../resources/shared/variable.js');
 
 describe('TS-003 | Webview', function() {

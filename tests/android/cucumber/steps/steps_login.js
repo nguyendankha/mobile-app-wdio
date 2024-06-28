@@ -3,8 +3,8 @@ const { Given, When, Then } = require('@wdio/cucumber-framework');
 const { expect } = require('chai');
 
 const login = {
-	action: require('../../../../resources/pages/android/pages/login/action.js'),
-	assert: require('../../../../resources/pages/android/pages/login/assert.js')
+	action: require('../../../../pages/android/pages/login/action.js'),
+	assert: require('../../../../pages/android/pages/login/assert.js')
 };
 const variable = require('../../../../resources/shared/variable.js');
 

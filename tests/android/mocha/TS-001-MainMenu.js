@@ -60,8 +60,8 @@
 
 // test suites: TS-001.js
 const { expect, setupAllure } = require('../../common/test-common');
-const mainMenu = require('../../../resources/pages/android/pages/main-page/action.js');
-const assert = require('../../../resources/pages/android/pages/main-page/assert.js');
+const mainMenu = require('../../../pages/android/pages/main-page/action.js');
+const assert = require('../../../pages/android/pages/main-page/assert.js');
 
 describe('TS-001 | Main Menu', function() {
 	it('TC-001 | Check all content is loaded', async function() {

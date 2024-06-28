@@ -101,12 +101,12 @@
 // test suites: TS-004.js
 const { expect, setupAllure } = require('../../common/test-common');
 const login = {
-	action: require('../../../resources/pages/android/pages/login/action.js'),
-	assert: require('../../../resources/pages/android/pages/login/assert.js')
+	action: require('../../../pages/android/pages/login/action.js'),
+	assert: require('../../../pages/android/pages/login/assert.js')
 };
 const logout = {
-	action: require('../../../resources/pages/android/pages/logout/action.js'),
-	assert: require('../../../resources/pages/android/pages/logout/assert.js')
+	action: require('../../../pages/android/pages/logout/action.js'),
+	assert: require('../../../pages/android/pages/logout/assert.js')
 };
 const variable = require('../../../resources/shared/variable.js');
 

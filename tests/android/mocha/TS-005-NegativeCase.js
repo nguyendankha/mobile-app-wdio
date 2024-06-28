@@ -72,8 +72,8 @@
 // test suites: TS-005.js
 const { expect, setupAllure } = require('../../common/test-common');
 const login = {
-	action: require('../../../resources/pages/android/pages/login/action.js'),
-	assert: require('../../../resources/pages/android/pages/login/assert.js')
+	action: require('../../../pages/android/pages/login/action.js'),
+	assert: require('../../../pages/android/pages/login/assert.js')
 };
 const variable = require('../../../resources/shared/variable.js');
 
